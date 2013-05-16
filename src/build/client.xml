@@ -8,13 +8,14 @@
   <includeBaseDirectory>false</includeBaseDirectory>
   <dependencySets>
     <dependencySet>
-      <!-- Unpack all the dependencies to class files, since java doesn't support 
+      <!-- Unpack all the dependencies to class files, since java doesn't support
         jar of jars for running -->
       <unpack>true</unpack>
       <!-- save these dependencies to the top-level -->
       <outputDirectory>/</outputDirectory>
       <!-- Maybe a blacklist is easier? -->
       <includes>
+      <!--
         <include>commons-configuration:commons-configuration</include>
         <include>commons-io:commons-io</include>
         <include>commons-lang:commons-lang</include>
@@ -27,13 +28,14 @@
         <include>org.apache.zookeeper:zookeeper</include>
         <include>log4j:log4j</include>
         <include>org.apache.hbase:hbase*</include>
+        -->
         <include>net.sf.opencsv:opencsv</include>
         <include>org.antlr:antlr*</include>
         <include>jline:jline</include>
         <!-- <include>*:jar:*</include> -->
       </includes>
     </dependencySet>
-    <!-- Separate dependency set to just pull in the jackson stuff since its test 
+    <!-- Separate dependency set to just pull in the jackson stuff since its test
       scoped and we only include 'runtime' scoped (which includes compile) dependencies -->
     <dependencySet>
       <scope>test</scope>

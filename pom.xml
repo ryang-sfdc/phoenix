@@ -58,21 +58,13 @@
     <antlr-output.dir>target/generated-sources/antlr3</antlr-output.dir>
 
     <!-- Dependency versions -->
-    <hbase.version>0.94.7</hbase.version>
+    <hbase.version>0.94.4</hbase.version>
     <commons-cli.version>1.2</commons-cli.version>
     <hadoop.version>1.0.4</hadoop.version>
     <junit.version>4.11</junit.version>
     <jackson.version>1.8.8</jackson.version>
     <antlr.version>3.5</antlr.version>
     <opencsv.version>2.3</opencsv.version>
-    <log4j.version>1.2.16</log4j.version>
-    <slf4j-api.version>1.4.3.jar</slf4j-api.version>
-    <slf4j-log4j.version>1.4.3</slf4j-log4j.version>
-    <protobuf-java.version>2.4.0a</protobuf-java.version>
-    <commons-configuration.version>1.6</commons-configuration.version>
-    <commons-io.version>2.1</commons-io.version>
-    <commons-lang.version>2.5</commons-lang.version>
-    <commons-logging.version>1.1.1</commons-logging.version>
 
     <!-- Plugin versions -->
     <maven-eclipse-plugin.version>2.8</maven-eclipse-plugin.version>
@@ -105,17 +97,17 @@
             <lifecycleMappingMetadata>
               <pluginExecutions>
                 <pluginExecution>
-                	<pluginExecutionFilter>
-                		<groupId>org.antlr</groupId>
-                		<artifactId>antlr3-maven-plugin</artifactId>
-                		<versionRange>[3.5,)</versionRange>
-                		<goals>
-                			<goal>antlr</goal>
-                		</goals>
-                	</pluginExecutionFilter>
-                	<action>
-                		<ignore></ignore>
-                	</action>
+                    <pluginExecutionFilter>
+                        <groupId>org.antlr</groupId>
+                        <artifactId>antlr3-maven-plugin</artifactId>
+                        <versionRange>[3.5,)</versionRange>
+                        <goals>
+                            <goal>antlr</goal>
+                        </goals>
+                    </pluginExecutionFilter>
+                    <action>
+                        <ignore></ignore>
+                    </action>
                 </pluginExecution>
               </pluginExecutions>
             </lifecycleMappingMetadata>
@@ -159,8 +151,8 @@
           </execution>
         </executions>
         <configuration>
-			<outputDirectory>${antlr-output.dir}/com/salesforce/phoenix/parse</outputDirectory>
-		</configuration>
+            <outputDirectory>${antlr-output.dir}/com/salesforce/phoenix/parse</outputDirectory>
+        </configuration>
       </plugin>
       <!-- Run with -Dmaven.test.skip.exec=true to build -tests.jar without running
         tests (this is needed for upstream projects whose tests need this jar simply for
@@ -282,7 +274,7 @@
           <id>attach-javadocs</id>
           <goals>
             <goal>jar</goal>
-	  </goals>
+      </goals>
           </execution>
         </executions>
       </plugin>
@@ -297,13 +289,13 @@
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-site-plugin</artifactId>
-	  <version>3.2</version>
+      <version>3.2</version>
       <configuration>
         <reportPlugins>
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>findbugs-maven-plugin</artifactId>
-	        <version>2.5.2</version>
+            <version>2.5.2</version>
           </plugin>
         </reportPlugins>
       </configuration>
@@ -355,11 +347,6 @@
           <artifactId>oro</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.pig</groupId>
-      <artifactId>pig</artifactId>
-      <version>0.11.0</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hbase</groupId>
